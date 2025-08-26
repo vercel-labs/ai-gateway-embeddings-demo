@@ -1,10 +1,3 @@
-import { Chat } from "@/components/chat";
-
-export default async function Page({
-  searchParams,
-}: {
-  searchParams: Promise<{ modelId: string }>;
-}) {
-  const { modelId } = await searchParams;
-  return <Chat modelId={modelId} />;
+export default function Chat() {
+  return <main>Hello, world!</main>;
 }
