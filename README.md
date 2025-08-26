@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+A simple [Next.js](https://nextjs.org) chatbot app to demonstrate the use of the Vercel AI Gateway with the [AI SDK](https://sdk.vercel.ai).
 
 ## Getting Started
 
-First, run the development server:
+### One-time setup
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-sdk-gateway-demo)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone this repository with the Deploy button above
+1. Install the [Vercel CLI](https://vercel.com/docs/cli) if you don't already have it
+1. Clone the repository you created above: `git clone <repo-url>`
+1. Link it to a Vercel project: `vc link` or `vc deploy`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Usage
+1. Install packages with `pnpm i` (or `npm i` or `yarn i`) and run the development server with `vc dev`
+1. Open http://localhost:3000 to try the chatbot
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### FAQ
 
-## Learn More
+1. If you prefer running your local development server directly rather than using `vc dev`, you'll need to run `vc env pull` to fetch the project's OIDC authentication token locally
+   1. the token expires every 12h, so you'll need to re-run this command periodically.
+   1. if you use `vc dev` it will auto-refresh the token for you, so you don't need to fetch it manually
+1. If you're linking to an existing, older project, you may need to enable the OIDC token feature in your project settings.
+   1. visit the project settings page (rightmost tab in your project's dashboard)
+   1. search for 'OIDC' in settings
+   1. toggle the button under "Secure Backend Access with OIDC Federation" to Enabled and click the "Save" button
 
-To learn more about Next.js, take a look at the following resources:
+## Authors
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This repository is maintained by the [Vercel](https://vercel.com) team and community contributors. 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Feel free to open issues or submit pull requests to enhance functionality or fix bugs.
