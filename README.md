@@ -12,9 +12,9 @@ A simple [Next.js](https://nextjs.org) chatbot app to demonstrate the use of emb
 1. Link it to a Vercel project: `vc link` or `vc deploy`
 
 ### Project setup
-1. Install packages with `pnpm i` (or `npm i` or `yarn i`) and run the development server with `vc dev`
+1. Install packages with `pnpm i` (or `npm i` or `yarn i`)
 1. Follow the [database setup](README.md#database-setup) section of this guide below
-1. Open http://localhost:3000 to try the chatbot
+1. Run the development server with `vc dev` and open http://localhost:3000 to try the chatbot
 
 ### Database setup
 #### Create database
@@ -47,11 +47,7 @@ To set up a Postgres instance on your Vercel account:
 #### Migrate database
 Once you have a Postgres database, you need to add the connection string as an environment secret.
 
-Make a copy of the `.env.example` file and rename it to `.env`. Run the following command:
-
-```bash
-cp .env.example .env
-```
+Make a copy of the `.env.example` file and rename it to `.env` with `cp .env.example .env`.
 
 Open the new .env file. You should see an item called `DATABASE_URL`. Copy in your database connection string after the equals sign.
 
