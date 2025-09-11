@@ -6,10 +6,9 @@ A simple [Next.js](https://nextjs.org) chatbot app to demonstrate the use of emb
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-gateway-embeddings-demo&amp;project-name=ai-gateway-embeddings&amp;repository-name=ai-gateway-embeddings&amp;demo-title=AI%20Gateway%20Embeddings%20Demo&amp;demo-description=A%20simple%20Next.js%20chatbot%20app%20to%20demonstrate%20the%20use%20of%20embedding%20models%20for%20RAG%20through%20the%20Vercel%20AI%20Gateway&amp;demo-url=https%3A%2F%2Fai-gateway-embeddings-demo.labs.vercel.dev&amp;products=%5B%7B%22type%22%3A%22integration%22%2C%22protocol%22%3A%22storage%22%2C%22productSlug%22%3A%22neon%22%2C%22integrationSlug%22%3A%22neon%22%7D%5D)
 
-1. Clone this repository with the Deploy button above
+1. Clone this repository with the Deploy button above. When creating your Neon database, turn off Auth.
 1. Install the [Vercel CLI](https://vercel.com/docs/cli) if you don't already have it
 1. Clone the repository you created above: `git clone <repo-url>`
-1. Link it to a Vercel project: `vc link` or `vc deploy`
 
 ### Project setup
 1. Install packages with `pnpm i` (or `npm i` or `yarn i`)
