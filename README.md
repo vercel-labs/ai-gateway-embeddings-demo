@@ -1,4 +1,4 @@
-A simple [Next.js](https://nextjs.org) chatbot app to demonstrate the use of embedding models through the Vercel AI Gateway for RAG.
+A simple [Next.js](https://nextjs.org) chatbot app to demonstrate the use of embedding models for RAG through the Vercel AI Gateway.
 
 ## Getting Started
 
