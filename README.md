@@ -9,11 +9,17 @@ A simple [Next.js](https://nextjs.org) chatbot app to demonstrate the use of emb
 1. Clone this repository with the Deploy button above. When creating your Neon database, turn off Auth.
 1. Install the [Vercel CLI](https://vercel.com/docs/cli) if you don't already have it
 1. Clone the repository you created above: `git clone <repo-url>`
+1. Link it to a Vercel project: `vc link` or `vc deploy`
 
 ### Project setup
 1. Install packages with `pnpm i` (or `npm i` or `yarn i`)
-1. Follow the [database setup](README.md#database-setup) section of this guide below
-1. Run the development server with `vc dev` and open http://localhost:3000 to try the chatbot
+2. Pull environment variables with `vc env pull` 
+3. Run a database migration with the following commands:
+```bash
+pnpm db:migrate
+pnpm db:push
+```
+4. Run the development server with `vc dev` and open http://localhost:3000 to try the chatbot
 
 ### Database setup
 #### Create database
