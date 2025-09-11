@@ -4,7 +4,7 @@ A simple [Next.js](https://nextjs.org) chatbot app to demonstrate the use of emb
 
 ### One-time setup
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-gateway-embeddings-demo)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-gateway-embeddings-demo&project-name=ai-gateway-embeddings&repository-name=ai-gateway-embeddings&demo-url=https://ai-gateway-embeddings-demo.labs.vercel.dev&products=[{"type":"integration","protocol":"storage","productSlug":"neon","integrationSlug":"neon"})
 
 1. Clone this repository with the Deploy button above
 1. Install the [Vercel CLI](https://vercel.com/docs/cli) if you don't already have it
