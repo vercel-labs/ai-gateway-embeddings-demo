@@ -8,6 +8,7 @@ export default function Chat() {
   const { messages, sendMessage } = useChat();
   return (
     <div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">
+      <h1 className="text-center text-lg mb-6">AI Gateway Embeddings for RAG</h1>
       <div className="space-y-4">
         {messages.map(m => (
           <div key={m.id} className="whitespace-pre-wrap">
