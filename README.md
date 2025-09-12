@@ -21,48 +21,6 @@ pnpm db:push
 ```
 4. Run the development server with `vc dev` and open http://localhost:3000 to try the chatbot
 
-### Database setup
-#### Create database
-You will need a Postgres database. If you don't have Postgres setup on your local machine you can:
-
-- Create a free Postgres database with Vercel (recommended - see instructions below); or
-- Follow [this guide](https://www.prisma.io/dataguide/postgresql/setting-up-a-local-postgresql-database) to set it up locally
-
-##### Setting up Postgres with Vercel
-To set up a Postgres instance on your Vercel account:
-
-1. Go to [Vercel.com](https://vercel.com/) and make sure you're logged in
-1. Navigate to your team homepage
-1. Click on the **Integrations** tab
-1. Click **Browse Marketplace**
-1. Look for the **Storage** option in the sidebar
-1. Select the **Neon** option (recommended, but any other PostgreSQL database provider should work)
-1. Click **Install**, then click **Install** again in the top right corner
-1. On the "Get Started with Neon" page, click **Create Database** on the right
-1. Select your region (e.g., Washington, D.C., U.S. East)
-1. Turn off **Auth**
-1. Click **Continue**
-1. Name your database (you can use the default name or rename it to something like "RagTutorial")
-1. Click **Create** in the bottom right corner
-1. After seeing "Database created successfully", click **Done**
-1. You'll be redirected to your database instance
-1. In the Quick Start section, click **Show secrets**
-1. Copy the full `DATABASE_URL` environment variable
-
-#### Migrate database
-Once you have a Postgres database, you need to add the connection string as an environment secret.
-
-Make a copy of the `.env.example` file and rename it to `.env` with `cp .env.example .env`.
-
-Open the new .env file. You should see an item called `DATABASE_URL`. Copy in your database connection string after the equals sign.
-
-With that set up, you can now run a database migration. Run the following commands:
-
-```bash
-pnpm db:migrate
-pnpm db:push
-```
-
 ### FAQ
 
 1. If you prefer running your local development server directly rather than using `vc dev`, you'll need to run `vc env pull` to fetch the project's OIDC authentication token locally
