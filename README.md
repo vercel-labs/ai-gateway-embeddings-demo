@@ -1,5 +1,7 @@
 A simple [Next.js](https://nextjs.org) chatbot app to demonstrate the use of embedding models for RAG through the Vercel AI Gateway.
 
+Paste any facts or docs into the chat and this app will chunk them, generate embeddings via the Vercel AI Gateway, and store them as vectors in Neon. When you ask a question, your query is embedded and the app performs a cosine-similarity search to pull the most relevant chunks. The model then answers using only the retrieved snippets. This demonstrates semantic retrieval (RAG): it matches meaning, not just keywords. Quick try: tell it "Our return window is 30 days and shipping to the US is free," then ask "Do you offer month-long refunds?" or "Is shipping to San Francisco free?"–you’ll see it retrieve the right facts from your knowledge base.
+
 ## Getting Started
 
 ### Deploy your own
