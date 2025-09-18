@@ -11,16 +11,12 @@ You can deploy your own version of the demo to Vercel with one click:
 
 ### Running locally
 1. Install the [Vercel CLI](https://vercel.com/docs/cli) if you don't already have it (`pnpm i -g vercel`)
-2. Clone the repository you created above: `git clone <repo-url>`
-3. Link it to a Vercel project: `vc link` or `vc deploy`
-4. Install packages with `pnpm i` (or `npm i` or `yarn i`)
-5. Pull environment variables with `vc env pull` 
-6. Run a database migration with the following commands:
-```bash
-pnpm db:migrate
-pnpm db:push
-```
-7. Run the development server with `vc dev` and open http://localhost:3000 to try the chatbot
+1. Clone the repository you created above: `git clone <repo-url>`
+1. Link it to a Vercel project: `vc link` or `vc deploy`
+1. Install packages with `pnpm i` (or `npm i` or `yarn i`)
+1. Pull environment variables with `vc env pull` 
+1. Run a database migration with `pnpm db:migrate && pnpm db:push`
+1. Run the development server with `vc dev` and open http://localhost:3000 to try the chatbot
 
 ### FAQ
 
