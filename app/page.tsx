@@ -4,6 +4,7 @@ import { useChat } from '@ai-sdk/react';
 import { useState } from 'react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { AlertCircle, Info } from 'lucide-react';
 
 export default function Chat() {
@@ -40,7 +41,7 @@ export default function Chat() {
                       <p>
                         call{part.state === 'output-available' ? 'ed' : 'ing'}{' '}
                         tool: {part.type}
-                        <pre className="my-4 bg-zinc-100 p-2 rounded-sm">
+                        <pre className="my-4 bg-zinc-100 p-2 rounded-sm whitespace-pre-wrap break-words">
                           {JSON.stringify(part.input, null, 2)}
                         </pre>
                       </p>
@@ -83,8 +84,9 @@ export default function Chat() {
           setInput('');
         }}
       >
-        <input
-          className="fixed bottom-0 w-full max-w-md p-2 mb-8 border border-gray-300 rounded shadow-xl"
+        <Input
+          type="text"
+          className="fixed bottom-0 w-full max-w-md mb-8 shadow-xl"
           value={input}
           placeholder="Say something..."
           onChange={e => setInput(e.currentTarget.value)}
