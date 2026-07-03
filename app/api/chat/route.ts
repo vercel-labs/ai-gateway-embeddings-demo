@@ -8,11 +8,21 @@ import {
 } from 'ai';
 import { z } from 'zod';
 import { findRelevantContent } from '@/lib/ai/embedding';
+import { ensureMigrated } from '@/lib/db';
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
 
 export async function POST(req: Request) {
+  try {
+    await ensureMigrated();
+  } catch {
+    return new Response(
+      "Database isn't ready. Confirm DATABASE_URL is set (the Neon integration provides it) and reachable, or run `pnpm db:migrate` locally.",
+      { status: 503 },
+    );
+  }
+
   const { messages }: { messages: UIMessage[] } = await req.json();
 
   const result = streamText({
