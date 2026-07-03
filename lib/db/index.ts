@@ -1,12 +1,17 @@
 import { drizzle } from "drizzle-orm/postgres-js";
 import { migrate } from "drizzle-orm/postgres-js/migrator";
 import postgres from "postgres";
-import { env } from "@/lib/env.mjs";
 
-export const db = drizzle(postgres(env.DATABASE_URL));
+export const db = drizzle(postgres(process.env.DATABASE_URL ?? ""));
 
-// Apply pending migrations once per instance so a fresh deploy works without a manual db:migrate
 export function ensureMigrated() {
+  if (!process.env.DATABASE_URL) {
+    return Promise.reject(
+      new Error(
+        "DATABASE_URL is not set — connect a Postgres database (the Neon integration provides it).",
+      ),
+    );
+  }
   return (migrationPromise ??= migrate(db, {
     migrationsFolder: "lib/db/migrations",
   }).catch((error) => {

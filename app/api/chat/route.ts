@@ -18,7 +18,7 @@ export async function POST(req: Request) {
     await ensureMigrated();
   } catch {
     return new Response(
-      "Database isn't ready. Confirm DATABASE_URL is set (the Neon integration provides it) and reachable, or run `pnpm db:migrate` locally.",
+      "No database connected. Add a Neon Postgres database in your Vercel project's Storage tab, then redeploy.",
       { status: 503 },
     );
   }
