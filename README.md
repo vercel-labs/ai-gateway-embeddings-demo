@@ -14,8 +14,9 @@ Paste any facts or docs into the chat and this app will chunk them, generate emb
 1. Link it to a Vercel project: `vc link` or `vc deploy`
 1. Pull environment variables with `vc env pull`
 1. Install packages with `pnpm i` (or `npm i` or `yarn i`)
-1. Run a database migration with `pnpm db:migrate && pnpm db:push`
 1. Run the development server with `vc dev` and open http://localhost:3000 to try the chatbot
+
+> The database schema is created automatically on the first request, so there's no manual migration step. To set it up ahead of time, you can run `pnpm db:migrate`.
 
 ### FAQ
 
